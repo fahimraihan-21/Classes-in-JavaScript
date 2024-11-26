@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS first class</title>
+
+</head>
+
+<body>
+<script>
+  class car {
+    constructor(brand,model)
+    {
+        this.brand=brand;
+        this.model=model;
+    }
+    displayinfo(){
+        console.log('this car is a ${this.brand} ${this.model}');
+    }
+  }
+  class elelctriccar extends car{
+    constructor(brand,model,battery_life){
+        super(brand,model)
+        this. battery_life=battery_life;
+    }
+    displaybattery(){
+        console.log('${this.brand} ${this.model} has a battery life of ${this.battery_life}' );
+    }
+}
+  const myelelctriccar=new elelctriccar('tesla','model s',24);
+  myelelctriccar.displayinfo();
+  myelelctriccar.displaybattery();
+</script>
+</body>
+
+</html>
